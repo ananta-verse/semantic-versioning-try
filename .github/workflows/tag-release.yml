@@ -44,5 +44,5 @@ jobs:
     # runs-on: ubuntu-latest
     permissions: write-all
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'development')
-    uses: anantakumarghosh/re-usable-workflow/.github/workflows/create-tag.yml@main
+    uses: ananta-verse/re-usable-workflow/.github/workflows/create-tag.yml@main
     secrets: inherit
