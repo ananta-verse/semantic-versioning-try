@@ -12,5 +12,5 @@ jobs:
 
        - name: Print Owner/Org Name
          run: | 
-          OWNER=${{ github.repository_owner }}"
+          OWNER=${{ github.repository_owner }}
           echo ${OWNER^}
