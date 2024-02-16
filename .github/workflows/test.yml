@@ -9,3 +9,6 @@ jobs:
      steps:
        - name: Print Var
          run: echo ${{ vars.DEFAULT_VERSION_BUMP }}
+
+       - name: Print Owner/Org Name
+         run: ${{ github.repository_owner }}
