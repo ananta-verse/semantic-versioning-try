@@ -1,0 +1,11 @@
+on:
+ workflow_dispatch:
+
+jobs:
+   printVar:
+     name: print var
+     runs-on: ubuntu-latest
+  
+     steps:
+       - name: Print Var
+         run: echo ${{ vars.DEFAULT_VERSION_BUMP }}
