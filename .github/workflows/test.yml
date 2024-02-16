@@ -11,4 +11,4 @@ jobs:
          run: echo ${{ vars.DEFAULT_VERSION_BUMP }}
 
        - name: Print Owner/Org Name
-         run: ${{ github.repository_owner }}
+         run: echo "{${${{ github.repository_owner }}^}"
