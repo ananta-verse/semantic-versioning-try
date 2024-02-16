@@ -14,3 +14,15 @@ jobs:
          run: | 
           OWNER=${{ github.repository_owner }}
           echo ${OWNER^}
+
+       - name: Sender Name configure
+         id: sender-name
+         run: |
+          if [[ -n "${{ secrets.SENDER_NAME }}" ]]; then
+              echo "SENDER_NAME=${{ secrets.SENDER_NAME }}" >> $GITHUB_ENV
+          else
+              REPOSITORY_OWNER_NAME=${{ github.repository_owner }}
+              echo "SENDER_NAME=${REPOSITORY_OWNER_NAME^}" >> $GITHUB_ENV
+          fi
+       - name: Print Sender Name
+         run: echo "$SENDER_NAME"
