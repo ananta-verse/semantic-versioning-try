@@ -25,4 +25,4 @@ jobs:
               echo "SENDER_NAME=${REPOSITORY_OWNER_NAME^}" >> $GITHUB_ENV
           fi
        - name: Print Sender Name
-         run: echo "$SENDER_NAME"
+         run: echo "${{env.SENDER_NAME}}"
